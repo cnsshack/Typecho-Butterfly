@@ -131,14 +131,16 @@
       }
       for (var elist = "null".split(","), cpage = location.pathname, epage = "all",
           qweather_key = "<?php $this->options->qweather_key() ?>",
+          qweather_host = "<?php $this->options->qweather_host() ?>", //增加和风新验证host地址
           gaud_map_key = "<?php $this->options->gaud_map_key() ?>",
           baidu_ak_key = "undefined", flag = 0,
           clock_rectangle = "112.6534116,27.96920845", clock_default_rectangle_enable = "false", i = 0; i < elist.length; i++) cpage.includes(elist[i]) && flag++;
       "all" === epage && 0 == flag ? butterfly_clock_anzhiyu_injector_config() : epage === cpage && butterfly_clock_anzhiyu_injector_config()
     </script>
-    <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
-    <script data-pjax src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.css">
+
+{/*        // 已失效 <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script> */}
+    <script data-pjax src="https://cdn.cbd.int/typecho-clock@1.2.1/lib/clock.min.js"></script> {/*  更改和风新验证  */}
+    <link rel="stylesheet" href="https://cdn.cbd.int/typecho-clock@1.2.1/lib/clock.min.css">  {/* //更改和风新验证  */}
   <?php endif ?>
   <?php $this->header('commentReply=1&description=0&keywords=0&generator=0&template=0&pingback=0&xmlrpc=0&wlw=0&rss2=0&rss1=0&antiSpam=0&atom'); ?>
   <?php if ($this->options->NewTabLink == 'on') : ?>

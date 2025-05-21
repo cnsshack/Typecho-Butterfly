@@ -442,9 +442,12 @@ function themeConfig($form)
     );
     $form->addInput($coverPosition->multiMode());
 
-    $qweather_key = new Typecho_Widget_Helper_Form_Element_Text('qweather_key', NULL, null, _t('时钟和风天气key'), _t('<a href="https://github.com/anzhiyu-c/hexo-butterfly-clock-anzhiyu/#安装">按照教程获取key</a>'));
+    //新增和风验证新字段host
+    $qweather_key = new Typecho_Widget_Helper_Form_Element_Text('qweather_key', NULL, null, _t('时钟和风天气key'), _t('<a href="https://dev.qweather.com/docs/configuration/api-config/">按照官方文档获取key</a>'));
+    $qweather_host = new Typecho_Widget_Helper_Form_Element_Text('qweather_host', NULL, null, _t('时钟和风天气host'), _t('按照和风官方文档获取host 不带https://开头'));
     $gaud_map_key = new Typecho_Widget_Helper_Form_Element_Text('gaud_map_key', NULL, null, _t('时钟高德地图web服务key'), _t('侧栏显示时钟用到的key，同上'));
     $form->addInput($qweather_key);
+    $form->addInput($qweather_host);
     $form->addInput($gaud_map_key);
 
     $ShowLive2D = new Typecho_Widget_Helper_Form_Element_Select(
