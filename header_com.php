@@ -51,6 +51,7 @@
   <link rel="stylesheet" href="https://lib.baomitu.com/font-awesome/6.5.1/css/all.min.css">
   <!--其余静态文件-->
   <link rel="stylesheet" href="<?php cdnBaseUrl() ?>/css/fancybox.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
   <link rel="stylesheet" href="<?php cdnBaseUrl() ?>/css/OwO.min.css">
   <?php if (!empty($this->options->beautifyBlock) && in_array('showSnackbar', $this->options->beautifyBlock)) : ?>
     <link rel="stylesheet" href="<?php $this->options->themeUrl('/css/snackbar.min.css') ?>" media="print" onload="this.media='all'">
