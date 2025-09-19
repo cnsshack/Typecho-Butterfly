@@ -131,6 +131,7 @@
       }
       for (var elist = "null".split(","), cpage = location.pathname, epage = "all",
           qweather_key = "<?php $this->options->qweather_key() ?>",
+          qweather_host = "<?php $this->options->qweather_host() ?>", <!--{/*  增加和风host输出  */}-->
           gaud_map_key = "<?php $this->options->gaud_map_key() ?>",
           baidu_ak_key = "undefined", flag = 0,
           clock_rectangle = "112.6534116,27.96920845", clock_default_rectangle_enable = "false", i = 0; i < elist.length; i++) cpage.includes(elist[i]) && flag++;
